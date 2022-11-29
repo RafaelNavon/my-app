@@ -1,49 +1,45 @@
 
 import ExpenseItem from "./components/ExpenseItem";
-import img1 from "./Images/DuneBook.jpg";
+import './App.css'
+
+import img1 from "./Images/TheHobbitBook.jpg";
+import img2 from "./Images/DuneBook.jpg";
+import img3 from "./Images/LordOfTheRings.jpg";
+import img4 from "./Images/TheSorcerer.jpg";
+import img5 from "./Images/City.jpg";
 
 
 function App() {
 
   const expense = [
-    { title: 'The Hobbit', amount: "ILS 84.60", image: img1 },
-    { title: 'Dune', amount: "ILS 88.20", },
-    { title: 'Lord Of The Rings', amount: "ILS 169.20" },
-    { title: 'The Sorcerer', amount: "ILS 88.20" },
-    { title: 'City of Bones', amount: "ILS 84.60" },
+    { title: 'The Hobbit', amount: "ILS 84.60", img: img1 },
+    { title: 'Dune', amount: "ILS 88.20", img: img2 },
+    { title: 'Lord Of The Rings', amount: "ILS 169.20", img: img3 },
+    { title: 'The Sorcerer', amount: "ILS 88.20", img: img4 },
+    { title: 'City of Bones', amount: "ILS 84.60", img: img5 },
 
   ];
+
+  let listItems = expense.map((item, prop) => {
+    return <li className="listitem" key={prop}>
+      <ExpenseItem
+        title={expense[prop].title}
+        amount={expense[prop].amount}
+        img={expense[prop].img}
+      ></ExpenseItem></li>
+  })
+
+
   return (
-    <div>
-      <h2 className="Title">Books Store</h2>
-      <img src="/Images/TheHobbitBook.jpg" alt="" height={100} width={100}></img>
-      <ExpenseItem
-        title={expense[0].title}
-        image={expense[0].image}
-        amount={expense[0].amount}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expense[1].title}
-        image={expense[1].image}
-        amount={expense[1].amount}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expense[2].title}
-
-        amount={expense[2].amount}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expense[3].title}
-
-        amount={expense[3].amount}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expense[4].title}
-
-        amount={expense[4].amount}
-      ></ExpenseItem>
-    </div>
-  )
+    <div className="Store">
+      <div className="BooksStore">
+        <h2>BookStore</h2>
+      </div>
+      <ul className="list_Items">
+        {listItems}
+      </ul>
+    </div >
+  );
 
 }
 

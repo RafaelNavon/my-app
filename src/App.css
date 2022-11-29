@@ -1,3 +1,12 @@
+.BooksStore {
+  color: rgb(11, 108, 253);
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .App {
   text-align: center;
 }
@@ -27,7 +36,8 @@
 h2 {
   text-align: center;
   padding-left: 20px;
-  color: rgb(220, 35, 35);
+  color: rgb(242, 14, 14);
+  font-size: 80px;
 }
 
 .App-link {
