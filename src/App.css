@@ -7,6 +7,31 @@
 
 }
 
+
+.HomeButton {
+  height: 50px;
+  width: 80px;
+  font-size: 18px;
+  background-color: #08702d;
+}
+
+.HomeButton:hover {
+  background-color: #ee9b9b;
+}
+
+.HomeButton:active {
+  background-color: #ee9b9b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.CartButton {
+  height: 50px;
+  width: 90px;
+  font-size: 18px;
+  background-color: #219347;
+}
+
 .App {
   text-align: center;
 }

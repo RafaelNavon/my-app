@@ -3,8 +3,7 @@ import './ExpenseItem.css'
 import ExpenseItemCart from './ExpenseItemCart'
 import React from 'react'
 
-function Cart(props) 
-{
+function Cart(props) {
     const items = props.items
     const { removeFromCart } = { ...props }
     const total = props.total
@@ -13,7 +12,7 @@ function Cart(props)
             <ExpenseItemCart
                 title={item.title}
                 amount={item.amount}
-                url={item.url}
+                img={item.img}
                 removeFromCart={removeFromCart}
             ></ExpenseItemCart>
         </li>

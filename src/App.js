@@ -18,11 +18,11 @@ import img5 from "./Images/City.jpg";
 
 //change
 const expense = [
-  { title: 'The Hobbit', amount: 84.60, img: img1 },
-  { title: 'Dune', amount: 88.20, img: img2 },
-  { title: 'Lord Of The Rings', amount: 169.20, img: img3 },
-  { title: 'The Sorcerer', amount: 88.20, img: img4 },
-  { title: 'City of Bones', amount: 84.60, img: img5 },
+  { title: 'The Hobbit', amount: 84, img: img1 },
+  { title: 'Dune', amount: 88, img: img2 },
+  { title: 'Lord Of The Rings', amount: 169, img: img3 },
+  { title: 'The Sorcerer', amount: 88, img: img4 },
+  { title: 'City of Bones', amount: 84, img: img5 },
 
 ];
 
@@ -36,10 +36,10 @@ function App() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <button class="btn btn-success"><Link to="/">Home</Link></button>
           </li>
           <li>
-            <Link to="/cart">Cart</Link>
+            <button class="btn btn-success"><Link to="/cart">Cart</Link></button>
           </li>
         </ul>
       </div>
@@ -68,8 +68,6 @@ function App() {
     setTotal(total - item.amount);
     setCart(hardCopy);
   }
-
-
 }
 
 export default App;
@@ -99,14 +97,3 @@ function ExpenseList(props) {
     </div >
   );
 }
-
-/*
-  let listItems = expense.map((item, prop) => {
-    return <li className="listitem" key={prop}>
-      <ExpenseItem
-        title={expense[prop].title}
-        amount={expense[prop].amount}
-        img={expense[prop].img}
-      ></ExpenseItem></li>
-  })
-  */

@@ -1,3 +1,21 @@
+.Button {
+    height: 50px;
+    width: 80px;
+    font-size: 15px;
+    background-color: #db1414;
+}
+
+.Button:hover {
+    background-color: #ee9b9b;
+}
+
+.Button:active {
+    background-color: #ee9b9b;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
 .expense-item {
     display: flex;
     justify-content: space-between;
