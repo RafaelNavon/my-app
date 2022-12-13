@@ -1,5 +1,6 @@
 
 import './ExpenseItem.css'
+import React from 'react';
 
 function ExpenseItem(props) {
     const addToCart = props.addToCart

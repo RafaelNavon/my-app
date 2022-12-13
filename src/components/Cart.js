@@ -1,6 +1,8 @@
 
 import './ExpenseItem.css'
 import ExpenseItemCart from './ExpenseItemCart'
+import React from 'react'
+
 function Cart(props) 
 {
     const items = props.items
@@ -18,7 +20,7 @@ function Cart(props)
     })
 
     return (
-        <div className="store">
+        <div className="Store">
             <div className="BooksStore">
                 <h2>Cart</h2>
             </div>

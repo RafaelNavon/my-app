@@ -3,6 +3,8 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Cart from './components/Cart';
 import { useState } from 'react';
+import React from "react";
+//import React,{Components} from 'react';
 
 import img1 from "./Images/TheHobbitBook.jpg";
 import img2 from "./Images/DuneBook.jpg";
@@ -92,7 +94,7 @@ function ExpenseList(props) {
         <h2>BookStore</h2>
       </div>
       <ul className="list_Items">
-        {listItems}
+        {itemList}
       </ul>
     </div >
   );
